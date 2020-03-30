@@ -21,16 +21,15 @@
 export default {
   name: "SidebarLogo",
   props: {
-    collapse: {
-      type: Boolean,
-      required: true
-    }
+    // collapse: {
+    //   type: Boolean,
+    //   required: true
+    // }
   },
   data() {
     return {
       title: "南通数字空间",
-      logo:
-        "https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png"
+      logo:require('../../../assets/logo.png')
     };
   }
 };
@@ -41,6 +40,10 @@ export default {
   transition: opacity 1.5s;
 }
 
+.sidebar__logo__box {
+  background: url('../../../assets/logo.png')
+}
+
 .sidebarLogoFade-enter,
 .sidebarLogoFade-leave-to {
   opacity: 0;
@@ -49,8 +52,8 @@ export default {
 .sidebar-logo-container {
   position: relative;
   width: 100%;
-  height: 280px;
-  line-height: 50px;
+  height: 14.7335rem;
+  line-height: 2.6316rem;
   background: #282F40;
   text-align: center;
   overflow: hidden;
@@ -60,18 +63,19 @@ export default {
     width: 100%;
 
     & .sidebar-logo {
-      width: 105px;
-      height: 118px;
+      width: 5.5263rem;
+      height: 6.2105rem;
       vertical-align: middle;
       margin: 0 auto;
-      margin-top: 44px;
+      margin-top: 2.3158rem;
       display: block;
+      background: url('')
     }
 
     & .sidebar-title {
-      margin-top: 33px;
+      margin-top: 1.7368rem;
       display: inline-block;
-      font-size: 30px;
+      font-size: 1.5789rem;
       font-family: PingFangSC-Medium, PingFang SC;
       font-weight: 500;
       color: rgba(255, 255, 255, 1);
@@ -80,7 +84,7 @@ export default {
 
   &.collapse {
     .sidebar-logo {
-      margin-right: 0px;
+      margin-right: 0rem;
     }
   }
 }

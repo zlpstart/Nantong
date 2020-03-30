@@ -35,9 +35,9 @@ export default {
     },
     classObj() {
       return {
-        hideSidebar: !this.sidebar.opened,
-        openSidebar: this.sidebar.opened,
-        withoutAnimation: this.sidebar.withoutAnimation,
+        // hideSidebar: !this.sidebar.opened,
+        // openSidebar: this.sidebar.opened,
+        // withoutAnimation: this.sidebar.withoutAnimation,
         mobile: this.device === 'mobile'
       }
     }
@@ -59,10 +59,10 @@ export default {
     position: relative;
     height: 100%;
     width: 100%;
-    &.mobile.openSidebar{
-      position: fixed;
-      top: 0;
-    }
+    // &.mobile.openSidebar{
+    //   position: fixed;
+    //   top: 0;
+    // }
   }
   .drawer-bg {
     background: #000;
@@ -87,7 +87,7 @@ export default {
     width: calc(100% - 54px)
   }
 
-  .mobile .fixed-header {
-    width: 100%;
-  }
+  // .mobile .fixed-header {
+  //   width: 100%;
+  // }
 </style>

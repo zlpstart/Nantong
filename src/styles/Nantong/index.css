@@ -1,0 +1,107 @@
+/* 表格上方的输入框和添加按钮 */
+.area_form_box {
+  display: flex;
+  justify-content: space-between;
+}
+/* 线 */
+.area_form_box {
+  width: 100%;
+  height: 3.1579rem;
+  border-bottom: 0.0526rem #d3dbe7 solid;
+}
+/* 添加按钮 */
+.area_addBtn {
+  width: 5.2632rem;
+  height: 2.1053rem;
+  background: rgba(77, 115, 244, 1);
+  border-radius: 0.2632rem;
+  font-size: 0.7368rem;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 2.1053rem;
+  text-align: center;
+}
+/* 盒子 */
+.element_box {
+  width: 100%;
+  background: #ffffff;
+  width: 100%;
+  padding: 1.3158rem;
+  padding: 1.0526rem 2.9474rem 4.1053rem 2.2105rem;
+  box-sizing: border-box;
+}
+/* 表格盒子 */
+.element_table {
+  width: 100%;
+  margin-top: 1.6842rem;
+  border:0.0526rem solid rgba(241,244,250,1);
+}
+/* 输入框 */
+.input-with-select input {
+  border: none;
+  background: #F7F9FC;
+}
+/* 输入框按钮 */
+.el-input-group__append {
+  border: none;
+  background: #F0F3F9;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.cell button:nth-child(1) {
+  width:2.7368rem;
+  padding: 0;
+  height:1.2632rem;
+  text-align: center;
+  color: #4D73F4;
+  line-height: 1.2632rem;
+  background:rgba(77,115,244,0.08);
+  border-radius:0.6316rem;
+  border:none;
+}
+.cell button:nth-child(2) {
+  width:2.7368rem;
+  padding: 0;
+  height:1.2632rem;
+  text-align: center;
+  color: #FF4D4F;
+  line-height: 1.2632rem;
+  background:#FFF2F3;
+  border-radius:0.6316rem;
+  border:none;
+}
+.cell button:nth-child(3) {
+  width:2.7368rem;
+  padding: 0;
+  height:1.2632rem;
+  border:none;
+  text-align: center;
+  color: #62C5AF;
+  line-height: 1.2632rem;
+  background:#ECFAF8;
+  border-radius:0.6316rem;
+}
+.el-table th, .el-table tr {
+  background: none !important;
+}
+.el-table__header-wrapper table {
+  background: #F7F9FC;
+  padding-left: 3.3158rem;
+}
+/* .el-table__body tbody tr td:nth-child(1) {
+  position: absolute;
+  left: 45px;
+} */
+.el-table .cell {
+  padding-right: 80px !important;
+}
+.area_addBtn {
+  cursor: pointer;
+}
+/* .cell button:nth-child(3){
+  margin-right: 3.3684rem;
+} */

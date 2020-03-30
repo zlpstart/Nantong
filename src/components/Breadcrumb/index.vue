@@ -59,23 +59,23 @@ export default {
 <style lang="scss" scoped>
 .app-breadcrumb.el-breadcrumb {
   display: inline-block;
-  font-size: 14px;
-  // line-height: 50px;
-  margin-left: 8px;
+  font-size: 0.7368rem;
+  // line-height: 2.6316rem;
+  margin-left: 0.4211rem;
 
   .no-redirect {
     // color: #97a8be;
     cursor: text;
-    font-size: 28px;
+    font-size: 1.4737rem;
     font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 600;
     color: #212735;
-    line-height: 112px;
-    margin-left: 42px;
+    line-height: 5.8947rem;
+    margin-left: 2.2105rem;
   }
 }
 // .no-redirect {
-//   font-size: 28px;
+//   font-size: 1.4737rem;
 //   font-family: PingFangSC-Medium, PingFang SC;
 //   font-weight: 500;
 //   color: #212735;

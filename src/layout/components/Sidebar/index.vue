@@ -1,12 +1,11 @@
 <template>
-  <div :class="{'has-logo':showLogo}">
-    <logo v-if="showLogo" :collapse="isCollapse" />
+  <div>
+    <logo :collapse="isCollapse" />
     <div class="xian"></div>
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         :width="variables.sideBarWidth"
         :default-active="activeMenu"
-        :collapse="isCollapse"
         :background-color="variables.menuBg"
         :text-color="variables.menuText"
         :unique-opened="false"
@@ -30,6 +29,7 @@ import { mapGetters } from "vuex";
 import Logo from "./Logo";
 import SidebarItem from "./SidebarItem";
 import variables from "@/styles/variables.scss";
+import '@/styles/Sidebar/index.css'
 
 export default {
   components: { SidebarItem, Logo },
@@ -47,9 +47,9 @@ export default {
       }
       return path;
     },
-    showLogo() {
-      return this.$store.state.settings.sidebarLogo;
-    },
+    // showLogo() {
+    //   return this.$store.state.settings.sidebarLogo;
+    // },
     variables() {
       return variables;
     },
@@ -63,18 +63,23 @@ export default {
 <style lang="scss" scoped>
 .el-scrollbar {
   text-align: center;
+  // height:auto;
+}
+.sidebar-container {
+    width: 36.8421rem;
+    background: red;
 }
 .el-scrollbar__view div {
-  width: 270px;
-  height: 48px;
-  border-radius: 5px;
+  width:100%;
+  height: 2.5263rem;
+  border-radius: 0.2632rem;
   margin: 0 auto;
-  margin-top: 18px;
-  border-radius: 121px;
+  margin-top: 0.9474rem;
+  border-radius: 6.3684rem;
 }
 .xian {
-  width: 306px;
-  height: 3px;
+  width: 100%;
+  height: 0.1579rem;
   background: #444F69;
 }
 </style>

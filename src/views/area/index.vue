@@ -1,30 +1,10 @@
 <template>
   <div class="app-container">
     <section>
-      <!--工具条-->
-      <!-- <el-col :span="24" class="toolbar" style="padding-bottom: 0px">
-        <el-form :inline="true" :model="filters">
-          <el-form-item>
-            <el-input v-model="filters.name" placeholder="名称" />
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="getAreas">查询</el-button>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="handleAdd">新增</el-button>
-          </el-form-item>
-        </el-form>
-      </el-col>-->
-
       <div class="element_box">
         <div class="area_form_box">
           <div class="area_input">
-            <el-input placeholder="请输入内容" v-model="input3" class="input-with-select">
-              <!-- <el-select v-model="select" slot="prepend" placeholder="请选择">
-            <el-option label="餐厅名" value="1"></el-option>
-            <el-option label="订单号" value="2"></el-option>
-            <el-option label="用户电话" value="3"></el-option>
-              </el-select>-->
+            <el-input placeholder="请输入内容" v-model="input3" class="input-with-select Input_select">
               <el-button slot="append" icon="el-icon-search"></el-button>
             </el-input>
           </div>
@@ -39,16 +19,17 @@
             default-expand-all="true"
             row-key="id"
             highlight-current-row
-            class="el_table zlp"
+            class="el_table"
           >
             <el-table-column prop="name" label="名称" style="width: 20%" />
             <el-table-column prop="areaCode" label="区域编码" style="width: 20%" />
             <el-table-column prop="fullName" label="区域全名" style="width: 20%" />
             <el-table-column prop="type" label="区域类型" style="width: 20%" />
             <el-table-column label="操作" style="width: 20%">
-              <template slot-scope="scope">
-                <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+              <template slot-scope="scope" class="el_table_2">
+                <el-button size="small" @click="handleEdit(scope.$index, scope.row)">查看</el-button>
                 <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">删除</el-button>
+                <el-button type="danger" size="small" @click="handleDel(scope.$index, scope.row)">编辑</el-button>
               </template>
             </el-table-column>
           </el-table>
@@ -104,6 +85,8 @@
 
 <script>
 import { tree, list, del, save, get } from "../../api/area";
+// import '../../styles/area/index';
+// import '../../styles/area/index.css'
 
 import { getDictByType } from "../../api/dict";
 
@@ -232,70 +215,15 @@ export default {
         }
       });
     }
+  },
+  computed:{
+    area(){
+      return area;
+    }
   }
 };
 </script>
 
 <style scoped>
-.area_input {
-  width: 260px;
-  height: 40px;
-}
-.el-table__header-wrapper table {
-  background: red !important;
-}
-.area_form_box {
-  display: flex;
-  justify-content: space-between;
-}
-.area_form_box {
-  width: 100%;
-  height: 60px;
-  /* padding: 20px 0 20px 0; */
-  /* box-sizing: border-box; */
-  border-bottom: 1px #d3dbe7 solid;
-}
-.area_addBtn {
-  width: 100px;
-  height: 40px;
-  background: rgba(77, 115, 244, 1);
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: PingFangSC-Medium, PingFang SC;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 1);
-  line-height: 40px;
-  text-align: center;
-}
-.app-main {
-  background: navy;
-}
-.element_box {
-  width: 100%;
-  background: #ffffff;
-}
-.el-input__inner {
-  border: none;
-  background: red;
-}
-.element_box {
-  width: 100%;
-  /* padding: 25px; */
-  padding: 20px 56px 78px 42px;
-  box-sizing: border-box;
-}
-.element_table {
-  width: 100%;
-  margin-top: 32px;
-  border:1px solid rgba(241,244,250,1);
-}
-.element_table table{
-  padding: 0 63px 0 159px;
-}
-.el-table__body-wrapper  table {
-  padding: 0 63px 0 159px; 
-}
-.el_table table {
-  padding: 10px;
-}
+
 </style>

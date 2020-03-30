@@ -28,6 +28,7 @@ export default {
 .fixed-header+.app-main {
   padding-top: 50px;
 }
+
 </style>
 
 <style lang="scss">

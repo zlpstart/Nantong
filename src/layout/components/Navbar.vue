@@ -1,21 +1,12 @@
 <template>
   <div class="navbar">
+        <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" /> -->
     <div class="navbar_title">
       <h1></h1>
     </div>
-    <!-- 缩回导航栏 -->
-    <!-- <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" /> -->
-    <!-- 系统管理 / 用户管理 -->
     <breadcrumb class="breadcrumb-container" />
-
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
-        <!-- 系统管理员 -->
-        <!-- <div class="avatar-wrapper">
-          <span style="display:block;">{{name}}</span>
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
-          <i class="el-icon-caret-bottom" />
-        </div>-->
         <div class="avatar-wrapper">
           <div class="avatar-wrapper-name">
             <p>{{name}}</p>
@@ -62,29 +53,29 @@ export default {
 
 <style lang="scss" scoped>
 .avatar-button {
-  width: 56px;
-  height: 28px;
-  line-height: 28px;
+  width: 2.9474rem;
+  height: 1.4737rem;
+  line-height: 1.4737rem;
   text-align: center;
   background: rgba(255, 255, 255, 1);
-  border-radius: 3px;
-  border: 1px solid rgba(77, 115, 244, 1);
-  font-size: 14px;
+  border-radius: 0.1579rem;
+  border: 0.0526rem solid rgba(77, 115, 244, 1);
+  font-size: 0.7368rem;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: rgba(77, 115, 244, 1);
-  margin-top: 22px;
-  margin-left: 32px;
+  margin-top: 1.3579rem;
+  margin-left: 1.6842rem;
 }
 .navbar {
-  height: 112px;
-  margin-top: -20px;
+  height: 5.8947rem;
+  margin-top: -1.0526rem;
   background: rgba(255, 255, 255, 1);
-  box-shadow: 2px 2px 24px 0px rgba(229, 233, 243, 1);
-  line-height: 112px;
+  box-shadow: 0.1053rem 0.1053rem 1.2632rem 0rem rgba(229, 233, 243, 1);
+  line-height: 5.8947rem;
 
   .hamburger-container {
-    line-height: 46px;
+    line-height: 2.4211rem;
     height: 100%;
     float: left;
     cursor: pointer;
@@ -100,10 +91,14 @@ export default {
     float: left;
   }
 
+  .avatar-button {
+    cursor: pointer;
+  }
+
   .right-menu {
     float: right;
     height: 100%;
-    line-height: 50px;
+    line-height: 2.6316rem;
 
     &:focus {
       outline: none;
@@ -111,9 +106,9 @@ export default {
 
     .right-menu-item {
       display: inline-block;
-      padding: 0 8px;
+      padding: 0 0.4211rem;
       height: 100%;
-      font-size: 18px;
+      font-size: 0.9474rem;
       color: #5a5e66;
       vertical-align: text-bottom;
 
@@ -128,28 +123,28 @@ export default {
     }
 
     .avatar-container {
-      margin-right: 30px;
+      margin-right: 1.5789rem;
 
       .avatar-wrapper {
-        // margin-top: 5px;
-        margin-top: 19px;
+        // margin-top: 0.2632rem;
+        margin-top: 0.8rem;
         position: relative;
-        margin-right: 81px;
+        margin-right: 4.2632rem;
         display: flex;
 
         .user-avatar {
           cursor: pointer;
-          width: 40px;
-          height: 40px;
-          border-radius: 10px;
+          width: 2.1053rem;
+          height: 2.1053rem;
+          border-radius: 0.5263rem;
         }
 
         .el-icon-caret-bottom {
           cursor: pointer;
           position: absolute;
-          right: -20px;
-          top: 25px;
-          font-size: 12px;
+          right: -1.0526rem;
+          top: 1.3158rem;
+          font-size: 0.6316rem;
         }
       }
     }
